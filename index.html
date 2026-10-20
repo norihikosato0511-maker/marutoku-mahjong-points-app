@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麻雀点数計算</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d6efd">
+
+manifest.json
+icon-192.png
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+
+        <h1>麻雀点数計算</h1>
+
+        <label>手の種類</label>
+        <select id="handType">
+            <option value="normal">通常手</option>
+            <option value="chitoi">七対子</option>
+            <option value="yakuman">役満</option>
+        </select>
+
+        <label>符数</label>
+        <select id="fu">
+            <option value="20">20符</option>
+            <option value="25">25符</option>
+            <option value="30">30符</option>
+            <option value="40">40符</option>
+            <option value="50">50符</option>
+            <option value="60">60符</option>
+        </select>
+
+        <label>翻数</label>
+        <select id="han">
+            <option value="1">1翻</option>
+            <option value="2">2翻</option>
+            <option value="3">3翻</option>
+            <option value="4">4翻</option>
+            <option value="5">5翻</option>
+            <option value="6">6翻</option>
+            <option value="7">7翻</option>
+            <option value="8">8翻</option>
+            <option value="9">9翻</option>
+            <option value="10">10翻</option>
+            <option value="11">11翻</option>
+            <option value="12">12翻</option>
+            <option value="13">13翻</option>
+        </select>
+
+        <label>親・子</label>
+        <select id="player">
+            <option value="child">子</option>
+            <option value="parent">親</option>
+        </select>
+
+        <label>和了方法</label>
+        <select id="win">
+            <option value="ron">ロン</option>
+            <option value="tsumo">ツモ</option>
+        </select>
+
+        <button onclick="calc()">計算する</button>
+
+        <div id="result">点数を表示</div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./service-worker.js");
+}
+</script>
+
+</body>
+</html>
